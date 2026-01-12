@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hindu-hero",
+      "description": "Hero image for Hinduism",
+      "imageUrl": "https://images.unsplash.com/photo-1674981324574-a0ebb0bef50d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0ZW1wbGUlMjBnb3B1cmFtfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "temple gopuram"
+    },
+    {
+      "id": "muslim-hero",
+      "description": "Hero image for Islam",
+      "imageUrl": "https://images.unsplash.com/photo-1637531503237-a406161e23bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3NxdWUlMjBkb21lfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mosque dome"
+    },
+    {
+      "id": "christian-hero",
+      "description": "Hero image for Christianity",
+      "imageUrl": "https://images.unsplash.com/photo-1614100085006-9828f6270781?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaHVyY2glMjBzdGFpbmVkLWdsYXNzfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church stained-glass"
+    },
+    {
+      "id": "sikh-hero",
+      "description": "Hero image for Sikhism",
+      "imageUrl": "https://images.unsplash.com/photo-1599840309126-7ece88628ded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnb2xkZW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzY4MjMwMDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "golden temple"
+    }
+  ]
 }
