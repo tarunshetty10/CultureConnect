@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Lotus } from 'lucide-react';
+import { Menu, BookOpen } from 'lucide-react';
 import { religions } from '@/lib/data/religions';
 
 export default function NavigationMenu() {
@@ -41,7 +41,7 @@ export default function NavigationMenu() {
                 onClick={() => setOpen(false)}
               >
                 <Link href={`/${religion.slug}`} className="flex items-center gap-4">
-                  <Lotus className="h-5 w-5 text-accent" />
+                  <BookOpen className="h-5 w-5 text-accent" />
                   {religion.name}
                 </Link>
               </Button>
