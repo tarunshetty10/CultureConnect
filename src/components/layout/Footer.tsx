@@ -5,6 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-background text-foreground py-12">
       <div className="container mx-auto px-4">
+        <div className="border-t border-border mb-8"></div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <h2 className="text-3xl font-bold font-headline text-primary">CultureConnect</h2>
