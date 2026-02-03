@@ -16,7 +16,7 @@ export interface Ritual {
   description: string;
 }
 
-export interface Pooja {
+export interface Activity {
   id: string;
   name: string;
   description: string;
@@ -33,5 +33,5 @@ export interface Religion {
   traditions: Tradition[];
   festivals: Festival[];
   rituals: Ritual[];
-  poojas?: Pooja[];
+  activities?: Activity[];
 }

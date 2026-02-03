@@ -41,7 +41,7 @@ export default function NavigationMenu() {
                 onClick={() => setOpen(false)}
               >
                 <Link 
-                  href={religion.slug === 'hinduism' ? `/${religion.slug}/poojas` : `/${religion.slug}`} 
+                  href={`/${religion.slug}/activities`} 
                   className="flex items-center gap-4"
                 >
                   <BookOpen className="h-5 w-5 text-accent" />

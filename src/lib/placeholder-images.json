@@ -41,6 +41,60 @@
       "description": "Satyanarayan Pooja example",
       "imageUrl": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoaW5kdSUyMHJpdHVhbHxlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hindu ritual"
+    },
+    {
+      "id": "islam-nikah",
+      "description": "Islamic Nikah",
+      "imageUrl": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpc2xhbWljJTIwd2VkZGluZ3xlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "islamic wedding"
+    },
+    {
+      "id": "islam-aqiqah",
+      "description": "Islamic Aqiqah",
+      "imageUrl": "https://images.unsplash.com/photo-1519689689353-89701638427e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXNsaW0lMjBiYWJ5fGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "muslim baby"
+    },
+    {
+      "id": "islam-janazah",
+      "description": "Islamic Janazah",
+      "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXNsaW0lMjBwcmF5ZXJ8ZW58MHx8fHwxNzY4MjMwMDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "muslim prayer"
+    },
+    {
+      "id": "christian-baptism",
+      "description": "Christian Baptism",
+      "imageUrl": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHJpc3RpYW4lMjBiYXB0aXNtfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "christian baptism"
+    },
+    {
+      "id": "christian-wedding",
+      "description": "Christian Wedding",
+      "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHJpc3RpYW4lMjB3ZWRkaW5nfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "christian wedding"
+    },
+    {
+      "id": "christian-memorial",
+      "description": "Christian Memorial",
+      "imageUrl": "https://images.unsplash.com/photo-1544427920-c49ccfb85579?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBtZW1vcmlhbHxlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church memorial"
+    },
+    {
+      "id": "sikh-wedding",
+      "description": "Sikh Wedding",
+      "imageUrl": "https://images.unsplash.com/photo-1595914149150-71669a9f325b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWtoJTIwd2VkZGluZ3xlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sikh wedding"
+    },
+    {
+      "id": "sikh-reading",
+      "description": "Sikh Reading",
+      "imageUrl": "https://images.unsplash.com/photo-1630156112237-680393df866a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWtoJTIwc2NyaXB0dXJlfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sikh scripture"
+    },
+    {
+      "id": "sikh-ardas",
+      "description": "Sikh Ardas",
+      "imageUrl": "https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWtoJTIwcHJheWVyfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sikh prayer"
     }
   ]
 }

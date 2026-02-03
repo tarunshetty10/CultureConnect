@@ -19,7 +19,7 @@ export const religions: Religion[] = [
     rituals: [
       { id: 'r1', name: 'Puja', description: 'A worship ritual performed by Hindus to offer devotional homage and prayer to one or more deities.' }
     ],
-    poojas: [
+    activities: [
       { 
         id: 'p1', 
         name: 'Ganesh Pooja', 
@@ -58,6 +58,26 @@ export const religions: Religion[] = [
     rituals: [
         { id: 'r2', name: 'Salat', description: 'The ritual prayer of Muslims, performed five times daily in a set form.' }
     ],
+    activities: [
+      {
+        id: 'i1',
+        name: 'Nikah Service',
+        description: 'A sacred Islamic wedding ceremony performed with tradition and legal witnesses.',
+        imageId: 'islam-nikah'
+      },
+      {
+        id: 'i2',
+        name: 'Aqiqah Ceremony',
+        description: 'The Islamic tradition of shaving a baby\'s head and performing a sacrifice to welcome a newborn.',
+        imageId: 'islam-aqiqah'
+      },
+      {
+        id: 'i3',
+        name: 'Janazah Service',
+        description: 'Compassionate funeral prayers and services conducted according to Islamic rites.',
+        imageId: 'islam-janazah'
+      }
+    ]
   },
   {
     id: '3',
@@ -77,6 +97,26 @@ export const religions: Religion[] = [
     rituals: [
         { id: 'r3', name: 'Baptism', description: 'A Christian rite of admission and adoption, almost invariably with the use of water, into Christianity.' }
     ],
+    activities: [
+      {
+        id: 'c1',
+        name: 'Holy Baptism',
+        description: 'A sacred sacrament of admission into the Christian faith using water and prayer.',
+        imageId: 'christian-baptism'
+      },
+      {
+        id: 'c2',
+        name: 'Wedding Ceremony',
+        description: 'Celebrate the union of two souls in a traditional church wedding ceremony.',
+        imageId: 'christian-wedding'
+      },
+      {
+        id: 'c3',
+        name: 'Memorial Service',
+        description: 'Honor and remember loved ones with a respectful and spiritual memorial service.',
+        imageId: 'christian-memorial'
+      }
+    ]
   },
   {
     id: '4',
@@ -96,5 +136,25 @@ export const religions: Religion[] = [
     rituals: [
         { id: 'r4', name: 'Amrit Sanchar', description: 'The Sikh ceremony of initiation or baptism. It is a sacred and significant event in a Sikh\'s life.' }
     ],
+    activities: [
+      {
+        id: 's1',
+        name: 'Anand Karaj',
+        description: 'The traditional Sikh wedding ceremony, focusing on spiritual union and joy.',
+        imageId: 'sikh-wedding'
+      },
+      {
+        id: 's2',
+        name: 'Akhand Path',
+        description: 'The continuous reading of the Guru Granth Sahib for spiritual growth and blessings.',
+        imageId: 'sikh-reading'
+      },
+      {
+        id: 's3',
+        name: 'Ardas Prayer',
+        description: 'A deeply spiritual prayer of petition and thanksgiving performed in the Sikh tradition.',
+        imageId: 'sikh-ardas'
+      }
+    ]
   },
 ];
