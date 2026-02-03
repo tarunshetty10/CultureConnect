@@ -23,6 +23,24 @@
       "description": "Hero image for Sikhism",
       "imageUrl": "https://images.unsplash.com/photo-1599840309126-7ece88628ded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnb2xkZW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzY4MjMwMDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "golden temple"
+    },
+    {
+      "id": "ganesh-pooja",
+      "description": "Ganesh Pooja example",
+      "imageUrl": "https://images.unsplash.com/photo-1567591974574-e85263d493ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW5lc2hhJTIwc3RhdHVlfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ganesha statue"
+    },
+    {
+      "id": "lakshmi-pooja",
+      "description": "Lakshmi Pooja example",
+      "imageUrl": "https://images.unsplash.com/photo-1605367031756-590d09663738?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsYWtzaG1pJTIwZ29kZGVzc3xlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lakshmi goddess"
+    },
+    {
+      "id": "satyanarayan-pooja",
+      "description": "Satyanarayan Pooja example",
+      "imageUrl": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoaW5kdSUyMHJpdHVhbHxlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hindu ritual"
     }
   ]
 }

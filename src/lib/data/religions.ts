@@ -19,6 +19,26 @@ export const religions: Religion[] = [
     rituals: [
       { id: 'r1', name: 'Puja', description: 'A worship ritual performed by Hindus to offer devotional homage and prayer to one or more deities.' }
     ],
+    poojas: [
+      { 
+        id: 'p1', 
+        name: 'Ganesh Pooja', 
+        description: 'A prayer dedicated to Lord Ganesha, the remover of obstacles, often performed before new beginnings.', 
+        imageId: 'ganesh-pooja' 
+      },
+      { 
+        id: 'p2', 
+        name: 'Lakshmi Pooja', 
+        description: 'A ritual dedicated to the Goddess Lakshmi to invite wealth, prosperity, and light into the home.', 
+        imageId: 'lakshmi-pooja' 
+      },
+      { 
+        id: 'p3', 
+        name: 'Satyanarayan Pooja', 
+        description: 'A sacred ritual dedicated to Lord Vishnu, typically performed on full moon days for overall well-being.', 
+        imageId: 'satyanarayan-pooja' 
+      },
+    ],
   },
   {
     id: '2',

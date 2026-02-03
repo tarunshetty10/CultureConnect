@@ -40,7 +40,10 @@ export default function NavigationMenu() {
                 className="justify-start font-headline text-xl h-12"
                 onClick={() => setOpen(false)}
               >
-                <Link href={`/${religion.slug}`} className="flex items-center gap-4">
+                <Link 
+                  href={religion.slug === 'hinduism' ? `/${religion.slug}/poojas` : `/${religion.slug}`} 
+                  className="flex items-center gap-4"
+                >
                   <BookOpen className="h-5 w-5 text-accent" />
                   {religion.name}
                 </Link>

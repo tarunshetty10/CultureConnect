@@ -16,6 +16,13 @@ export interface Ritual {
   description: string;
 }
 
+export interface Pooja {
+  id: string;
+  name: string;
+  description: string;
+  imageId: string;
+}
+
 export interface Religion {
   id: string;
   name: string;
@@ -26,4 +33,5 @@ export interface Religion {
   traditions: Tradition[];
   festivals: Festival[];
   rituals: Ritual[];
+  poojas?: Pooja[];
 }
