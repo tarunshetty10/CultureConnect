@@ -23,24 +23,17 @@ export default function SignUpPage() {
             Create an Account
           </h1>
           <p className="text-sm text-muted-foreground">
-            Enter your email and password below to create your account
+            Enter your details below to create your account
           </p>
         </div>
         <SignUpForm />
         <p className="px-8 text-center text-sm text-muted-foreground">
-          By clicking continue, you agree to our{' '}
+          Already have an account?{' '}
           <Link
-            href="/terms"
+            href="/login"
             className="underline underline-offset-4 hover:text-primary"
           >
-            Terms of Service
-          </Link>{' '}
-          and{' '}
-          <Link
-            href="/privacy"
-            className="underline underline-offset-4 hover:text-primary"
-          >
-            Privacy Policy
+            Log In
           </Link>
           .
         </p>
