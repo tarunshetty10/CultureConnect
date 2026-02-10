@@ -19,7 +19,7 @@ export default function Home() {
           <Button 
             asChild 
             size="lg" 
-            className="font-headline transition-all duration-300 hover:bg-background hover:text-primary border-2 border-transparent hover:border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.6)]"
+            className="font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.6)]"
           >
             <Link href="#explore">Explore Religions</Link>
           </Button>
