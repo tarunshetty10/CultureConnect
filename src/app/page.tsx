@@ -16,7 +16,11 @@ export default function Home() {
           Embark on a journey to explore the rich tapestry of global cultures and traditions. Discover connections, celebrate diversity, and broaden your understanding of the world's faiths.
         </p>
         <div className="mt-8 flex justify-center gap-4">
-          <Button asChild size="lg" className="font-headline">
+          <Button 
+            asChild 
+            size="lg" 
+            className="font-headline transition-all duration-300 hover:bg-background hover:text-primary border-2 border-transparent hover:border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.6)]"
+          >
             <Link href="#explore">Explore Religions</Link>
           </Button>
         </div>
