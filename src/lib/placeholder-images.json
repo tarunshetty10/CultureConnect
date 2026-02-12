@@ -95,6 +95,12 @@
       "description": "Sikh Ardas",
       "imageUrl": "https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWtoJTIwcHJheWVyfGVufDB8fHx8MTc2ODIzMDAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sikh prayer"
+    },
+    {
+      "id": "about-hero",
+      "description": "About CultureConnect Image",
+      "imageUrl": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdWx0dXJhbCUyMGRpdmVyc2l0eXxlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cultural diversity"
     }
   ]
 }
