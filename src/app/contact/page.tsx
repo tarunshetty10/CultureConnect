@@ -17,8 +17,10 @@ import {
 } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Mail, User, MessageSquare } from 'lucide-react';
-import { collection, doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase/client';
+import { errorEmitter } from '@/firebase/error-emitter';
+import { FirestorePermissionError } from '@/firebase/errors';
 
 const wordCount = (str: string) => {
   return str.trim().split(/\s+/).length;
@@ -50,32 +52,41 @@ export default function ContactPage() {
     },
   });
 
-  const onSubmit = async (values: ContactFormValues) => {
+  const onSubmit = (values: ContactFormValues) => {
     setIsSubmitting(true);
-    try {
-      const submissionId = crypto.randomUUID();
-      const submissionRef = doc(db, 'contact_submissions', submissionId);
-      
-      await setDoc(submissionRef, {
-        id: submissionId,
-        ...values,
-        submissionDate: new Date().toISOString(),
-      });
-
+    const submissionId = crypto.randomUUID();
+    const submissionRef = doc(db, 'contact_submissions', submissionId);
+    
+    // Non-blocking Firestore write
+    setDoc(submissionRef, {
+      id: submissionId,
+      ...values,
+      submissionDate: new Date().toISOString(),
+    })
+    .then(() => {
       toast({
         title: 'Message Sent!',
         description: "We've received your message and will get back to you soon.",
       });
       form.reset();
-    } catch (error: any) {
+    })
+    .catch(async (serverError) => {
+      const permissionError = new FirestorePermissionError({
+        path: submissionRef.path,
+        operation: 'create',
+        requestResourceData: values,
+      });
+      errorEmitter.emit('permission-error', permissionError);
+      
       toast({
         variant: 'destructive',
         title: 'Error',
         description: 'Failed to send message. Please try again later.',
       });
-    } finally {
+    })
+    .finally(() => {
       setIsSubmitting(false);
-    }
+    });
   };
 
   return (
@@ -90,7 +101,8 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="bg-card p-8 rounded-2xl border-2 border-primary/10 shadow-xl">
+        {/* Updated with a prominent borderline */}
+        <div className="bg-card p-8 rounded-2xl border-2 border-primary shadow-xl">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
