@@ -1,0 +1,116 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * FIREBASE SECURITY RULES DOCUMENTATION
+     *
+     * Core Philosophy:
+     * This ruleset implements a "Public-Write, Admin-Read" model for contact form submissions. 
+     * It prioritizes accessibility for potential leads/customers while restricting sensitive 
+     * data access to authorized administrative personnel.
+     *
+     * Data Structure:
+     * - /contact_submissions/{id}: A top-level collection containing form data (name, email, message).
+     * - /app_roles/admin_users/{uid}: A dedicated collection for managing administrative access 
+     *   via Document-Based Access Control (DBAC).
+     *
+     * Key Security Decisions:
+     * 1. Open Creation: To allow maximum conversion, the 'create' operation on contact 
+     *    submissions is open to all users (authenticated and anonymous).
+     * 2. Administrative Lockdown: All read, update, and delete operations are strictly 
+     *    restricted to users whose UID exists in the admin roles collection.
+     * 3. Immutability for Public: Once a submission is created, the public has no further 
+     *    access to read, edit, or delete it, preventing data leaks or tampering.
+     * 4. Relational Integrity: On creation, the rules enforce that the internal 'id' field 
+     *    matches the document path ID.
+     */
+
+    // --- Global Helper Functions ---
+
+    /**
+     * @description Checks if the user is authenticated with Firebase Auth.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * @description Determines if the current user has administrative privileges by checking 
+     * for a document matching their UID in the admin users collection.
+     */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/app_roles/admin_users/$(request.auth.uid));
+    }
+
+    /**
+     * @description Verifies that a document exists and the user is an administrator.
+     * Used for destructive or state-changing operations.
+     */
+    function isExistingAdmin() {
+      return resource != null && isAdmin();
+    }
+
+    // --- Collection Rules ---
+
+    /**
+     * @description Rules for the admin roles collection. This collection acts as the 
+     * source of truth for administrative authorization.
+     * @path /app_roles/admin_users/{uid}
+     * @allow (get) If the user is signed in (to check their own status).
+     * @deny (write) All writes are denied via rules to prevent self-elevation; roles should 
+     * be managed via the Firebase Console or a separate Admin SDK.
+     * @principle Restricts administrative role management to secure environments.
+     */
+    match /app_roles/admin_users/{uid} {
+      allow get: if isSignedIn();
+      allow list: if isAdmin();
+      allow create, update, delete: if false;
+    }
+
+    /**
+     * @description Rules for website contact form submissions.
+     * @path /contact_submissions/{contactSubmissionId}
+     * @allow (create) Any user (authenticated or anonymous) to facilitate lead capture.
+     * @allow (get, list, update, delete) Only authorized admin users.
+     * @deny (get, list) Any non-admin user attempting to view sensitive contact data.
+     * @principle Implements an intake-only policy for the public while granting 
+     * full lifecycle management to admins.
+     */
+    match /contact_submissions/{contactSubmissionId} {
+      
+      // Public creation: Ensure the internal ID matches the document path
+      allow create: if request.resource.data.id == contactSubmissionId;
+      
+      // Administrative access for all other operations
+      allow get, list: if isAdmin();
+      allow update, delete: if isExistingAdmin();
+    }
+  }
+}
+
+/**
+ * STEP 1 ANALYSIS SYNTHESIS:
+ * 1. Adopt the Intent: The reasoning specifies that contact submissions are "write-any" 
+ *    but "read-admin-only". Admin status is stored in a separate global collection.
+ * 2. Access Patterns:
+ *    - /contact_submissions: Public Read with Owner-Only Writes (Pattern 5) is NOT 
+ *      applicable because there is no "owner" for the submissions after creation. 
+ *      Instead, we use a custom "Open Intake / Admin Management" pattern.
+ *    - /app_roles/admin_users: Roles (Pattern 2).
+ * 3. Relational Integrity: Enforcing that the `ContactSubmission.id` field matches the 
+ *    Firestore document ID during creation to prevent path/data drift.
+ */
+
+/**
+ * PROTOTYPING MODE NOTICE:
+ * These rules do not enforce the maximum length of the message (300 words/2000 chars) 
+ * or the format of the email. This logic is deferred to the application layer to 
+ * allow for rapid schema iteration.
+ */
+
+/**
+ * P5 VALIDATION SUMMARY:
+ * On Create: request.resource.data.id == contactSubmissionId
+ * On Update: Enforced via isAdmin() and resource != null; no public updates allowed.
+ */

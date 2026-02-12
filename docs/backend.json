@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "ContactSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactSubmission",
+      "type": "object",
+      "description": "Represents a contact message submitted by a user through the website's contact form.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the ContactSubmission entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name provided by the user submitting the contact form."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address provided by the user for contact.",
+          "format": "email"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message content submitted by the user. (Approximately 300 words limit, represented by maxLength of 2000 characters)."
+        },
+        "submissionDate": {
+          "type": "string",
+          "description": "The date and time when the contact message was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "message",
+        "submissionDate"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/contact_submissions/{contactSubmissionId}",
+        "definition": {
+          "entityName": "ContactSubmission",
+          "schema": {
+            "$ref": "#/backend/entities/ContactSubmission"
+          },
+          "description": "Stores contact messages submitted by users through the website's contact form. Any user (authenticated or anonymous) can create a new submission. Only authorized administrators can read these submissions, with authorization managed via a separate global roles collection. No denormalization is needed within this document for authorization as access is based on global roles.",
+          "params": [
+            {
+              "name": "contactSubmissionId",
+              "description": "The unique identifier for a specific contact message submission."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure for `ContactSubmission` entities is designed to prioritize authorization independence, clarity, and adherence to QAPs (Queries as Authorization Policies). All `ContactSubmission` documents will reside in a top-level collection named `/contact_submissions`. This collection follows the 'Structural Segregation' mandate by ensuring all documents within it share a homogeneous security posture: any user (authenticated or anonymous) can create a new submission, while only designated administrators can read existing submissions.\n\nAuthorization Independence is achieved for read access by separating the definition of administrative roles from the `ContactSubmission` documents themselves. Instead of relying on data within the `ContactSubmission` document (or its non-existent parent) for authorization, administrative access will be determined by the presence of the `request.auth.uid` in a dedicated 'global roles' collection (e.g., `/app_roles/admin_users/{uid}`). This adheres to the DBAC principle and eliminates the need for expensive and complex `get()` calls in security rules to check for administrative privileges, allowing for atomic operations and simpler debugging. For creation, `request.auth.uid` is not required, allowing anonymous submissions.\n\nQAPs are fully supported. For 'create' operations on `/contact_submissions`, rules will permit any user to write, as there's no pre-filtering required based on the user's identity or document content. For 'list' and 'get' operations, administrators can securely query `/contact_submissions` directly. The security rule for reading would check if `request.auth.uid` exists in the `/app_roles/admin_users` collection. This allows an admin to fetch all submissions efficiently without the rules acting as data filters, thus enabling efficient and secure list operations. The `ContactSubmission` document itself contains all necessary information (`name`, `email`, `message`, `submissionDate`) without relying on external lookups for its core data or authorization for its creation."
+  }
+}
