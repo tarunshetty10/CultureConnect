@@ -76,11 +76,20 @@ export default function PoojasPage({ params }: { params: Promise<{ religion: str
                     {pooja.description}
                   </p>
                   <div className="mt-auto flex flex-col sm:flex-row gap-3">
-                    <Button variant="default" className="flex-1 font-headline">
+                    <Button
+                      variant="default"
+                      className="flex-1 font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+                    >
                       Explore Now
                     </Button>
                     <Button variant="outline" className="flex-1 font-headline border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
-                      <a href={`https://wa.me/1234567890?text=I'm interested in booking ${pooja.name}`} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={`https://wa.me/918450925262?text=${encodeURIComponent(
+                          `I'm interested in booking ${pooja.name} via CultureConnect`,
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Send className="mr-2 h-4 w-4" />
                         Book on WhatsApp
                       </a>

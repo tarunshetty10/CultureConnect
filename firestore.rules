@@ -86,6 +86,22 @@ service cloud.firestore {
       allow get, list: if isAdmin();
       allow update, delete: if isExistingAdmin();
     }
+
+    /**
+     * @description Rules for user profile documents.
+     * @path /users/{uid}
+     * @allow (create) Signed-in user can create their own profile doc.
+     * @allow (get, update) Signed-in user can read/update their own profile doc.
+     * @allow (list, get, update, delete) Admins can manage users as needed.
+     * @deny (list) Public listing of users to protect privacy.
+     */
+    match /users/{uid} {
+      allow create: if isSignedIn() && request.auth.uid == uid;
+      allow get: if (isSignedIn() && request.auth.uid == uid) || isAdmin();
+      allow update: if (isSignedIn() && request.auth.uid == uid) || isAdmin();
+      allow list: if isAdmin();
+      allow delete: if isAdmin();
+    }
   }
 }
 

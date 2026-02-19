@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Link from 'next/link';
 import { Search, Send } from 'lucide-react';
 
 export default function ActivitiesPage({ params }: { params: Promise<{ religion: string }> }) {
@@ -78,11 +79,23 @@ export default function ActivitiesPage({ params }: { params: Promise<{ religion:
                     {activity.description}
                   </p>
                   <div className="mt-auto flex flex-col sm:flex-row gap-3">
-                    <Button variant="default" className="flex-1 font-headline">
-                      Explore Now
+                    <Button
+                      variant="default"
+                      className="flex-1 font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+                      asChild
+                    >
+                      <Link href={`/${resolvedParams.religion}/activities/${activity.id}`}>
+                        Explore Now
+                      </Link>
                     </Button>
                     <Button variant="outline" className="flex-1 font-headline border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
-                      <a href={`https://wa.me/1234567890?text=I'm interested in booking ${activity.name}`} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={`https://wa.me/918450925262?text=${encodeURIComponent(
+                          `I'm interested in booking ${activity.name} via CultureConnect`,
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Send className="mr-2 h-4 w-4" />
                         Book on WhatsApp
                       </a>
