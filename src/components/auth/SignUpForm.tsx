@@ -11,7 +11,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/lib/firebase/client';
+import { auth, db } from '@/lib/firebase/client';
+import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { Loader2 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -49,7 +50,18 @@ export default function SignUpForm() {
     setLoading(true);
     try {
       // Create user with email and password
-      await createUserWithEmailAndPassword(auth, values.email, values.password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password,
+      );
+
+      // Save additional user details to Firestore for the profile page
+      await setDoc(doc(db, 'users', userCredential.user.uid), {
+        email: values.email,
+        phoneNumber: values.phoneNumber,
+        createdAt: serverTimestamp(),
+      });
       
       toast({
         title: 'Account Created',
@@ -146,7 +158,11 @@ export default function SignUpForm() {
             )}
           />
 
-          <Button type="submit" className="w-full font-headline" disabled={loading}>
+          <Button
+            type="submit"
+            className="w-full font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+            disabled={loading}
+          >
             {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             Create Account
           </Button>
