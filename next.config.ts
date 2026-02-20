@@ -1,3 +1,4 @@
+
 import type {NextConfig} from 'next';
 import {config} from 'dotenv';
 
@@ -40,6 +41,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.99pandit.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.news18.com',
         port: '',
         pathname: '/**',
       },
