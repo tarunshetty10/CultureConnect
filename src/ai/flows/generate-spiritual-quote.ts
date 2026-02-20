@@ -56,8 +56,8 @@ const prompt = ai.definePrompt({
       },
     ],
   },
-  prompt: `You are a wise spiritual sage. Generate a short, powerful, and motivational spiritual quote based on the keyword provided. 
-  The quote should be inspiring and promote personal growth.
+  prompt: `You are a wise spiritual sage. Generate a short, powerful, and motivational spiritual quote that EXPLICITLY INCLUDES the keyword provided below. 
+  The quote should be inspiring, promote personal growth, and the word should fit naturally within the wisdom shared.
 
   Keyword: {{{keyword}}}`,
 });
@@ -74,7 +74,7 @@ const generateSpiritualQuoteFlow = ai.defineFlow(
       if (!output) {
         // Fallback for unexpected empty output from the LLM
         return {
-          quote: "Even in silence, there is wisdom to be found. Let your journey continue with hope.",
+          quote: `Even in silence, ${input.keyword} can be found. Let your journey continue with hope.`,
           attribution: "Traditional Wisdom"
         };
       }
@@ -83,7 +83,7 @@ const generateSpiritualQuoteFlow = ai.defineFlow(
       console.error('AI Quote Generation Error:', error);
       // High-level fallback to ensure the UI never shows "Generation Failed" for common errors
       return {
-        quote: "Growth begins where fear ends. Every step forward is a victory of the soul.",
+        quote: `True ${input.keyword} begins where fear ends. Every step forward is a victory of the soul.`,
         attribution: "Spiritual Proverb"
       };
     }
