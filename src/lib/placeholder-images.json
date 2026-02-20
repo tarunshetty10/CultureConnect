@@ -61,6 +61,24 @@
       "imageHint": "hindu festival"
     },
     {
+      "id": "lakshmi-example-1",
+      "description": "Detailed setup for Lakshmi Pooja.",
+      "imageUrl": "https://live.staticflickr.com/4093/4935104495_4a64d27f70_b.jpg",
+      "imageHint": "lakshmi ritual"
+    },
+    {
+      "id": "lakshmi-example-2",
+      "description": "Traditional Lakshmi idol and offerings.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Laxmi_Pooja.jpg/250px-Laxmi_Pooja.jpg",
+      "imageHint": "lakshmi idol"
+    },
+    {
+      "id": "lakshmi-example-3",
+      "description": "Bright and festive Lakshmi Pooja celebration.",
+      "imageUrl": "https://shreesarvasiddhi.com/wp-content/uploads/2021/07/Laxmi-puja.jpeg",
+      "imageHint": "lakshmi festival"
+    },
+    {
       "id": "islam-nikah",
       "description": "Elegant Islamic wedding ceremony details.",
       "imageUrl": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpc2xhbWljJTIwd2VkZGluZ3xlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",

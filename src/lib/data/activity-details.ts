@@ -1,3 +1,4 @@
+
 /**
  * Extended details for activities (photos gallery, YouTube video, how it's done).
  * Keyed by activity id from religions data.
@@ -24,7 +25,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   p2: {
     activityId: 'p2',
-    galleryImageIds: ['lakshmi-pooja', 'ganesh-pooja', 'satyanarayan-pooja'],
+    galleryImageIds: ['lakshmi-example-1', 'lakshmi-example-2', 'lakshmi-example-3'],
     youtubeVideoId: 'DquVSn82RcY', // Lakshmi Pooja tutorial video
     howItsDone: [
       'Lakshmi Pooja is performed to invoke Goddess Lakshmi, the deity of wealth, prosperity, and fortune. It is especially popular during Diwali and on Fridays, which are considered auspicious for Lakshmi worship.',
