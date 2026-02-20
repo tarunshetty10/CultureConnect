@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { religions } from '@/lib/data/religions';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import QuoteGenerator from '@/components/home/QuoteGenerator';
 
 export default function Home() {
   return (
@@ -53,6 +54,9 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      {/* New Spiritual Quote Generator Section */}
+      <QuoteGenerator />
     </div>
   );
 }
