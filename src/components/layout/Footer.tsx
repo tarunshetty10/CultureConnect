@@ -22,8 +22,24 @@ export default function Footer() {
             <div>
               <h3 className="font-headline text-lg font-semibold">Follow Us</h3>
               <ul className="mt-4 space-y-2">
-                <li><a href="#" className="flex items-center gap-2 hover:text-primary transition-colors"><Facebook /> Facebook</a></li>
-                <li><a href="#" className="flex items-center gap-2 hover:text-primary transition-colors"><Instagram /> Instagram</a></li>
+                <li>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61588366056555" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Facebook className="h-5 w-5" /> Facebook
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#" 
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Instagram className="h-5 w-5" /> Instagram
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
