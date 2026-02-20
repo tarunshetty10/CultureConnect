@@ -82,7 +82,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   c2: {
     activityId: 'c2',
-    galleryImageIds: ['christian-wedding', 'christian-hero', 'christian-baptism'],
+    galleryImageIds: ['christian-wedding', 'christian-wedding-2', 'christian-wedding-3'],
     youtubeVideoId: 'YxJKnDLYZz4', // Christian wedding ceremony tutorial video
     howItsDone: [
       'A Christian wedding ceremony is a sacred union between two people, performed in the presence of God, family, and friends. The ceremony typically takes place in a church, though it can be held in other venues. It follows traditional Christian rites and includes vows, prayers, and blessings.',
