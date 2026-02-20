@@ -70,10 +70,10 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   c1: {
     activityId: 'c1',
-    galleryImageIds: ['christian-baptism', 'christian-hero', 'christian-wedding'],
+    galleryImageIds: ['christian-baptism', 'baptism-example-2', 'baptism-example-3'],
     youtubeVideoId: 'XxJKnDLYZz4', // Holy Baptism ceremony tutorial video
     howItsDone: [
-      'Holy Baptism is one of the seven sacraments in Christianity, marking a person\'s initiation into the Christian faith. It is typically performed in a church by a priest or minister, though it can also be done in other settings. The ceremony symbolizes the washing away of sin and rebirth in Christ.',
+      'Holy Baptism is one of the seven sacraments in Christianity, marking a person\'s initiation into the Christian faith. It is typically performed in a church by a priest or minister, though it can be done in other settings. The ceremony symbolizes the washing away of sin and rebirth in Christ.',
       'The ceremony begins with prayers and readings from the Bible, often including passages about baptism such as Matthew 28:19 ("Go and make disciples of all nations, baptizing them...") and Romans 6:3-4. The candidate (or their parents/guardians for infant baptism) makes declarations of faith and renounces sin.',
       'The priest or minister performs the baptism using water - either by immersion (fully submerging the person), affusion (pouring water over the head), or aspersion (sprinkling water). The water is blessed and consecrated before use. The minister says, "I baptize you in the name of the Father, and of the Son, and of the Holy Spirit."',
       'After the baptism, the newly baptized person is anointed with chrism (holy oil) in some traditions, signifying the gift of the Holy Spirit. A baptismal candle is lit from the Paschal candle, symbolizing Christ as the light of the world. The person receives a white garment, representing purity and new life in Christ.',
