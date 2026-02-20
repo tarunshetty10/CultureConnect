@@ -118,4 +118,40 @@ export const activityDetails: Record<string, ActivityDetail> = {
       'The service concludes with a benediction and final prayer. If a burial follows, there is a committal service at the gravesite, where the body is committed to the earth with prayers. Family and friends gather afterward for a reception or meal, providing support and sharing memories of the loved one.',
     ],
   },
+  s1: {
+    activityId: 's1',
+    galleryImageIds: ['sikh-wedding', 'sikh-hero', 'sikh-reading'],
+    youtubeVideoId: 'D-9C0vX6U-I', // Anand Karaj guide
+    howItsDone: [
+      'Anand Karaj is the sacred Sikh wedding ceremony, which translates to "Joyful Union". It is performed in the presence of the Guru Granth Sahib (the holy scripture) and emphasizes the spiritual union of two souls.',
+      'The ceremony begins with "Milni", where the families of the bride and groom meet and exchange garlands and gifts outside the Gurdwara.',
+      'The main ritual is the "Laavan", where the couple walks around the Guru Granth Sahib four times while specific hymns are recited. Each circle (Lavan) represents a stage of spiritual growth and commitment.',
+      'The ceremony includes Ardas (prayer) and the distribution of Karah Prasad (blessed sweet offering) to all attendees.',
+      'The wedding concludes with a communal meal (Langar), emphasizing equality and community.',
+    ],
+  },
+  s2: {
+    activityId: 's2',
+    galleryImageIds: ['sikh-reading', 'sikh-hero', 'sikh-ardas'],
+    youtubeVideoId: 'pSjYqK2M0vE', // Akhand Path guide
+    howItsDone: [
+      'Akhand Path is the continuous and uninterrupted reading of the entire Guru Granth Sahib from beginning to end. It usually takes about 48 hours.',
+      'It is often performed on special occasions such as weddings, birthdays, anniversaries, or to seek blessings during difficult times.',
+      'The reading is done by a team of readers (Granthis) who take turns to ensure there is no break in the recitation.',
+      'During the Akhand Path, the atmosphere is one of deep devotion and meditation. Devotees often sit in the presence of the holy scripture to listen and reflect.',
+      'The ceremony concludes with a Bhog (completion ceremony), followed by Ardas and the distribution of Karah Prasad.',
+    ],
+  },
+  s3: {
+    activityId: 's3',
+    galleryImageIds: ['sikh-ardas', 'sikh-hero', 'sikh-reading'],
+    youtubeVideoId: '3o_G7fX9vXk', // Ardas prayer guide
+    howItsDone: [
+      'Ardas is a formal Sikh prayer that is recited at the beginning or end of any significant task, ceremony, or congregational gathering. It is an act of standing before God in humility and petition.',
+      'The congregation stands with hands folded in prayer (Anjali mudra) facing the Guru Granth Sahib.',
+      'The Ardas recounts the history of the Sikh Gurus, the sacrifices of the martyrs, and seeks blessings for all of humanity.',
+      'It is a way for Sikhs to connect with their heritage and seek divine guidance and strength for daily life.',
+      'The prayer concludes with a final bowing (Namskar) and the distribution of Karah Prasad, signifying the acceptance of God\'s grace.',
+    ],
+  },
 };
