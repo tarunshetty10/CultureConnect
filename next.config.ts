@@ -2,7 +2,7 @@
 import type {NextConfig} from 'next';
 import {config} from 'dotenv';
 
-config({path: '.env.local'});
+config({path: '.dotenv.local'});
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -65,6 +65,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.ompoojashop.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.shopify.com',
         port: '',
         pathname: '/**',
       },
