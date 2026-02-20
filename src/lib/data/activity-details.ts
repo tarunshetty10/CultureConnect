@@ -106,8 +106,8 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   s2: {
     activityId: 's2',
-    galleryImageIds: ['sikh-reading', 'sikh-hero', 'sikh-ardas'],
-    youtubeVideoId: 'pSjYqK2M0vE', // Akhand Path guide
+    galleryImageIds: ['sikh-reading'],
+    youtubeVideoId: 'qnJqulOBIlA', // Updated Akhand Path guide
     howItsDone: [
       'Akhand Path is the continuous and uninterrupted reading of the entire Guru Granth Sahib from beginning to end. It usually takes about 48 hours.',
       'It is often performed on special occasions such as weddings, birthdays, anniversaries, or to seek blessings during difficult times.',
