@@ -1,4 +1,3 @@
-
 import type {NextConfig} from 'next';
 import {config} from 'dotenv';
 
@@ -143,6 +142,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.quranmualim.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lirp.cdn-website.com',
         port: '',
         pathname: '/**',
       },
