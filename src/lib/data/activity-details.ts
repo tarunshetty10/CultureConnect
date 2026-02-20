@@ -71,7 +71,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   c1: {
     activityId: 'c1',
     galleryImageIds: ['christian-baptism', 'baptism-example-2', 'baptism-example-3'],
-    youtubeVideoId: 'XxJKnDLYZz4', // Holy Baptism ceremony tutorial video
+    youtubeVideoId: 'aDUQXGG6w20', // Holy Baptism ceremony tutorial video
     howItsDone: [
       'Holy Baptism is one of the seven sacraments in Christianity, marking a person\'s initiation into the Christian faith. It is typically performed in a church by a priest or minister, though it can be done in other settings. The ceremony symbolizes the washing away of sin and rebirth in Christ.',
       'The ceremony begins with prayers and readings from the Bible, often including passages about baptism such as Matthew 28:19 ("Go and make disciples of all nations, baptizing them...") and Romans 6:3-4. The candidate (or their parents/guardians for infant baptism) makes declarations of faith and renounces sin.',
@@ -83,7 +83,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   c2: {
     activityId: 'c2',
     galleryImageIds: ['christian-wedding', 'christian-hero', 'christian-baptism'],
-    youtubeVideoId: 'YxJKnDLYZz5', // Christian wedding ceremony tutorial video
+    youtubeVideoId: 'YxJKnDLYZz4', // Christian wedding ceremony tutorial video
     howItsDone: [
       'A Christian wedding ceremony is a sacred union between two people, performed in the presence of God, family, and friends. The ceremony typically takes place in a church, though it can be held in other venues. It follows traditional Christian rites and includes vows, prayers, and blessings.',
       'The ceremony begins with the processional, where the wedding party enters the church. The bride is escorted down the aisle, often by her father or both parents. The groom waits at the altar with the officiant (priest or minister). The congregation stands as the bride enters, and music is played.',
