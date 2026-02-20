@@ -48,7 +48,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   i1: {
     activityId: 'i1',
-    galleryImageIds: ['islam-nikah', 'islam-nikah-2', 'islam-nikah-3'],
+    galleryImageIds: ['islam-nikah'],
     howItsDone: [
       'Nikah is the Islamic marriage ceremony, a sacred contract between a bride and groom. It is performed in the presence of witnesses and an Islamic officiant (Qazi or Imam). The ceremony can be held at a mosque, community center, or at home.',
       'The ceremony begins with the recitation of the Khutbah (sermon) by the officiant, which includes verses from the Quran about marriage. The bride and groom, along with their guardians (Wali), are present. The groom must have two male Muslim witnesses.',
@@ -118,8 +118,8 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   s3: {
     activityId: 's3',
-    galleryImageIds: ['sikh-ardas', 'sikh-hero', 'sikh-reading'],
-    youtubeVideoId: '3o_G7fX9vXk', // Ardas prayer guide
+    galleryImageIds: ['sikh-ardas'],
+    youtubeVideoId: 'qdd2CpkRh9E', // Ardas prayer guide
     howItsDone: [
       'Ardas is a formal Sikh prayer that is recited at the beginning or end of any significant task, ceremony, or congregational gathering. It is an act of standing before God in humility and petition.',
       'The congregation stands with hands folded in prayer (Anjali mudra) facing the Guru Granth Sahib.',
