@@ -26,7 +26,9 @@ export default function ReligionPage({ params }: ReligionPageProps) {
       <header className="relative h-[50vh] flex items-center justify-center text-primary-foreground">
         {heroImage && <Image src={heroImage.imageUrl} alt={religion.name} fill data-ai-hint={heroImage.imageHint} className="object-cover -z-10 brightness-[0.4]" />}
         <div className="text-center p-4">
-          <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-lg">{religion.name}</h1>
+          <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-lg transition-all duration-500 hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.8)] cursor-default">
+            {religion.name}
+          </h1>
         </div>
       </header>
 
