@@ -92,6 +92,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.mypandit.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
