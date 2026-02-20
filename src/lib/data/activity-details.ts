@@ -26,7 +26,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   p2: {
     activityId: 'p2',
     galleryImageIds: ['lakshmi-example-1', 'lakshmi-example-2', 'lakshmi-example-3'],
-    youtubeVideoId: 'DquVSn82RcY', // Lakshmi Pooja tutorial video
+    youtubeVideoId: 'DRuuFxgWMM8', // Updated Lakshmi Pooja tutorial video
     howItsDone: [
       'Lakshmi Pooja is performed to invoke Goddess Lakshmi, the deity of wealth, prosperity, and fortune. It is especially popular during Diwali and on Fridays, which are considered auspicious for Lakshmi worship.',
       'The pooja begins with cleaning and decorating the puja area. A kalash (sacred pot) filled with water, mango leaves, and a coconut is placed. The Lakshmi idol or image is positioned on a red cloth, symbolizing prosperity.',
