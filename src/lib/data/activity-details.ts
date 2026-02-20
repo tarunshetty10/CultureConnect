@@ -38,7 +38,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   p3: {
     activityId: 'p3',
     galleryImageIds: ['satyanarayan-example-1', 'satyanarayan-example-2', 'satyanarayan-example-3'],
-    youtubeVideoId: 'GI3d9LQUFCA', // Satyanarayan Pooja tutorial video
+    youtubeVideoId: 'lA_2wy0Sxmc', // Updated Satyanarayan Pooja tutorial video
     howItsDone: [
       'Satyanarayan Pooja is a sacred ritual dedicated to Lord Vishnu in his form as Satyanarayan, the embodiment of truth. It is typically performed on full moon days (Purnima) and is believed to bring peace, prosperity, and fulfillment of wishes.',
       'The pooja setup includes a kalash with water, mango leaves, and coconut. The Satyanarayan idol or image is placed on a yellow cloth. Panchamrita (five nectars) and holy water from the Ganges are kept ready for the abhishekam.',
