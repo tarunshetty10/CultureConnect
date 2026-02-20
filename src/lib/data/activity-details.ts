@@ -61,7 +61,6 @@ export const activityDetails: Record<string, ActivityDetail> = {
   i2: {
     activityId: 'i2',
     galleryImageIds: ['islam-aqiqah', 'aqiqah-example-2', 'aqiqah-example-3'],
-    youtubeVideoId: 'vJ8wY5w5B5M', // Aqiqah ceremony tutorial video
     howItsDone: [
       'Aqiqah is an Islamic tradition performed to celebrate the birth of a child. It involves the sacrifice of an animal (sheep or goat) and the shaving of the baby\'s head. This ceremony is typically performed on the seventh day after birth, though it can be done later.',
       'The ceremony begins with the shaving of the baby\'s head. The hair is weighed, and its equivalent weight in silver or gold is given as charity (Sadaqah). This act symbolizes purification and the removal of impurities. The baby is given a good name, often chosen from Islamic names with positive meanings.',
