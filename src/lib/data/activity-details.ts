@@ -94,8 +94,8 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   s1: {
     activityId: 's1',
-    galleryImageIds: ['sikh-wedding', 'sikh-hero', 'sikh-reading'],
-    youtubeVideoId: 'D-9C0vX6U-I', // Anand Karaj guide
+    galleryImageIds: ['sikh-wedding'],
+    youtubeVideoId: 'eWIdXSSq5KY', // Anand Karaj guide
     howItsDone: [
       'Anand Karaj is the sacred Sikh wedding ceremony, which translates to "Joyful Union". It is performed in the presence of the Guru Granth Sahib (the holy scripture) and emphasizes the spiritual union of two souls.',
       'The ceremony begins with "Milni", where the families of the bride and groom meet and exchange garlands and gifts outside the Gurdwara.',
