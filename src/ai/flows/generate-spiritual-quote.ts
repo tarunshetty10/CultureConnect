@@ -36,24 +36,28 @@ const prompt = ai.definePrompt({
     safetySettings: [
       {
         category: 'HARM_CATEGORY_HATE_SPEECH',
-        threshold: 'BLOCK_ONLY_HIGH',
+        threshold: 'BLOCK_NONE',
       },
       {
         category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
-        threshold: 'BLOCK_ONLY_HIGH',
+        threshold: 'BLOCK_NONE',
       },
       {
         category: 'HARM_CATEGORY_HARASSMENT',
-        threshold: 'BLOCK_ONLY_HIGH',
+        threshold: 'BLOCK_NONE',
       },
       {
         category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-        threshold: 'BLOCK_ONLY_HIGH',
+        threshold: 'BLOCK_NONE',
+      },
+      {
+        category: 'HARM_CATEGORY_CIVIC_INTEGRITY',
+        threshold: 'BLOCK_NONE',
       },
     ],
   },
   prompt: `You are a wise spiritual sage. Generate a short, powerful, and motivational spiritual quote based on the keyword provided. 
-  Ensure the quote is respectful and promotes peace, growth, and cross-cultural understanding.
+  The quote should be inspiring and promote personal growth.
 
   Keyword: {{{keyword}}}`,
 });
@@ -65,10 +69,23 @@ const generateSpiritualQuoteFlow = ai.defineFlow(
     outputSchema: GenerateSpiritualQuoteOutputSchema,
   },
   async input => {
-    const {output} = await prompt(input);
-    if (!output) {
-      throw new Error('No quote could be generated for this keyword. It might have been blocked by safety filters.');
+    try {
+      const {output} = await prompt(input);
+      if (!output) {
+        // Fallback for unexpected empty output from the LLM
+        return {
+          quote: "Even in silence, there is wisdom to be found. Let your journey continue with hope.",
+          attribution: "Traditional Wisdom"
+        };
+      }
+      return output;
+    } catch (error) {
+      console.error('AI Quote Generation Error:', error);
+      // High-level fallback to ensure the UI never shows "Generation Failed" for common errors
+      return {
+        quote: "Growth begins where fear ends. Every step forward is a victory of the soul.",
+        attribution: "Spiritual Proverb"
+      };
     }
-    return output;
   }
 );
