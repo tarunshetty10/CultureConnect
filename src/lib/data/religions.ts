@@ -6,18 +6,38 @@ export const religions: Religion[] = [
     name: 'Hinduism',
     slug: 'hinduism',
     summary: 'An ancient religion from India, characterized by a diversity of beliefs and practices.',
-    description: 'Hinduism is one of the world\'s oldest religions, and it is a way of life for many in India and Nepal. It has a vast array of gods and goddesses, with the principal deities being Brahma, Vishnu, and Shiva. Its sacred texts include the Vedas, Upanishads, Puranas, Ramayana, Mahabharata, and Bhagavad Gita.',
+    description: 'Hinduism is one of the oldest living religions in the world, with roots going back thousands of years. For many people in India and Nepal, it is not just a religion but a way of life that guides daily habits, values, traditions, and celebrations. Hinduism teaches ideas like dharma (duty and righteousness), karma (actions and their consequences), and moksha (spiritual freedom). It encourages living a life of truth, compassion, respect, and harmony with nature. There are many gods and goddesses in Hinduism, each representing different qualities of life and the universe. The three main deities, often called the Trimurti, are Brahma – the creator, Vishnu – the protector, and Shiva – the transformer. Hinduism’s sacred texts include the Vedas, Upanishads, Puranas, the epic stories Ramayana and Mahabharata, and the spiritual guide Bhagavad Gita, which teaches important life lessons about duty, devotion, and self-realization.',
     heroImageId: 'hindu-hero',
     traditions: [
-      { id: 't1', name: 'Yoga', description: 'A group of physical, mental, and spiritual practices or disciplines which originated in ancient India.' },
-      { id: 't2', name: 'Aarti', description: 'A Hindu religious ritual of worship, a part of puja, in which light from wicks soaked in ghee is offered to one or more deities.' },
+      { 
+        id: 't1', 
+        name: 'Yoga', 
+        description: 'Yoga began in ancient India and is much more than physical exercise. It is a practice that connects the body, mind, and soul. It includes physical postures (asanas), breathing techniques (pranayama), and meditation and mindfulness. The goal of yoga is inner peace, balance, and spiritual growth.' 
+      },
+      { 
+        id: 't2', 
+        name: 'Aarti', 
+        description: 'Aarti is a beautiful and devotional ritual performed during worship (puja). In this ceremony, a small lamp made with ghee (clarified butter) or oil is lit and gently moved in circular motions before a deity. It symbolizes removing darkness, inviting positivity, and offering gratitude and devotion. Aarti is often accompanied by singing hymns and ringing bells, creating a peaceful and uplifting atmosphere.' 
+      },
     ],
     festivals: [
-      { id: 'f1', name: 'Diwali', description: 'The festival of lights, symbolizing the victory of light over darkness, good over evil, and knowledge over ignorance.' },
-      { id: 'f2', name: 'Holi', description: 'The festival of colors, celebrating the arrival of spring and the triumph of good over evil.' },
+      { 
+        id: 'f1', 
+        name: 'Diwali', 
+        description: 'Diwali is known as the Festival of Lights. It celebrates the victory of light over darkness, good over evil, and knowledge over ignorance. People celebrate by lighting oil lamps (diyas), decorating homes with rangoli, sharing sweets, and praying for prosperity and happiness. It is a time of joy, family bonding, and new beginnings.' 
+      },
+      { 
+        id: 'f2', 
+        name: 'Holi', 
+        description: 'Holi is the vibrant Festival of Colors. It marks the arrival of spring and celebrates the triumph of good over evil. During Holi, people throw colored powders (gulal), dance and sing, enjoy festive foods, and forgive and forget past misunderstandings. It’s a celebration of happiness, unity, and fresh beginnings.' 
+      },
     ],
     rituals: [
-      { id: 'r1', name: 'Puja', description: 'A worship ritual performed by Hindus to offer devotional homage and prayer to one or more deities.' }
+      { 
+        id: 'r1', 
+        name: 'Puja', 
+        description: 'Puja is a daily or special worship ritual where devotees offer prayers, flowers, incense, food, and light to one or more deities. It is a way to express gratitude, seek blessings, and connect spiritually. Puja can be performed at home or in temples and can be simple or elaborate depending on the occasion.' 
+      }
     ],
     activities: [
       { 
