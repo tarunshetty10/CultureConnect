@@ -122,6 +122,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'symphonyevents.com.au',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
