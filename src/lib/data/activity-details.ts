@@ -1,4 +1,3 @@
-
 /**
  * Extended details for activities (photos gallery, YouTube video, how it's done).
  * Keyed by activity id from religions data.
@@ -69,18 +68,6 @@ export const activityDetails: Record<string, ActivityDetail> = {
       'An animal is sacrificed - two sheep or goats for a boy, and one for a girl. The animal must be healthy and meet Islamic dietary requirements (Halal). The sacrifice is performed by a qualified person who recites "Bismillah" (In the name of Allah) before the sacrifice.',
       'The meat from the sacrifice is divided into three parts: one-third for the family, one-third for relatives and friends, and one-third for the poor and needy. This distribution emphasizes sharing blessings and caring for the community. The meat is cooked and shared in a communal meal.',
       'Prayers and supplications are made for the child\'s health, protection, and righteous upbringing. The ceremony concludes with family and friends gathering to celebrate the new addition to the family, often with a feast where the sacrificed meat is served.',
-    ],
-  },
-  i3: {
-    activityId: 'i3',
-    galleryImageIds: ['islam-janazah', 'muslim-hero', 'islam-nikah'],
-    youtubeVideoId: 'zJ8wY5w5B5M', // Janazah prayer tutorial video
-    howItsDone: [
-      'Janazah is the Islamic funeral prayer and service performed for a deceased Muslim. It is a collective obligation (Fard Kifayah) for the Muslim community. The service should be performed as soon as possible after death, ideally before burial.',
-      'The body is prepared according to Islamic rites (Ghusl - ritual washing). The deceased is washed with clean water, wrapped in simple white cloths (Kafan), typically three pieces for men and five for women. The body is then placed on a bier or stretcher, facing the Qibla (direction of Mecca).',
-      'The Janazah prayer is performed in congregation, usually at a mosque or funeral home. It consists of four Takbirs (saying "Allahu Akbar" - Allah is Greatest) with specific supplications between them. Unlike regular prayers, there is no Ruku (bowing) or Sujud (prostration).',
-      'During the prayer, specific duas are recited asking Allah for forgiveness and mercy for the deceased. The congregation stands in rows behind the Imam, and the prayer is performed silently except for the Takbirs. All Muslims present, regardless of their relationship to the deceased, participate.',
-      'After the prayer, the body is taken to the cemetery for burial. The deceased is buried in a simple grave, placed on their right side facing the Qibla. The burial is completed quickly, and family members offer condolences. It is customary to provide food for the family and make supplications for the deceased\'s forgiveness and entry into Paradise.',
     ],
   },
   c1: {

@@ -70,12 +70,6 @@ export const religions: Religion[] = [
         name: 'Aqiqah Ceremony',
         description: 'The Islamic tradition of shaving a baby\'s head and performing a sacrifice to welcome a newborn.',
         imageId: 'islam-aqiqah'
-      },
-      {
-        id: 'i3',
-        name: 'Janazah Service',
-        description: 'Compassionate funeral prayers and services conducted according to Islamic rites.',
-        imageId: 'islam-janazah'
       }
     ]
   },
