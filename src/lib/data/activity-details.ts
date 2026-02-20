@@ -83,7 +83,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   c2: {
     activityId: 'c2',
     galleryImageIds: ['christian-wedding', 'christian-wedding-2', 'christian-wedding-3'],
-    youtubeVideoId: 'YxJKnDLYZz4', // Christian wedding ceremony tutorial video
+    youtubeVideoId: 'lqgHmCq_rCg', // Christian wedding ceremony tutorial video
     howItsDone: [
       'A Christian wedding ceremony is a sacred union between two people, performed in the presence of God, family, and friends. The ceremony typically takes place in a church, though it can be held in other venues. It follows traditional Christian rites and includes vows, prayers, and blessings.',
       'The ceremony begins with the processional, where the wedding party enters the church. The bride is escorted down the aisle, often by her father or both parents. The groom waits at the altar with the officiant (priest or minister). The congregation stands as the bride enters, and music is played.',
