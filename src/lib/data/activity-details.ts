@@ -6,7 +6,7 @@
 export interface ActivityDetail {
   activityId: string;
   galleryImageIds: string[];
-  youtubeVideoId: string;
+  youtubeVideoId?: string;
   howItsDone: string[];
 }
 
@@ -50,7 +50,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   i1: {
     activityId: 'i1',
     galleryImageIds: ['islam-nikah', 'islam-nikah-2', 'islam-nikah-3'],
-    youtubeVideoId: 'kQqjKZ5n5B8', // Nikah ceremony tutorial video
+    // youtubeVideoId removed as requested
     howItsDone: [
       'Nikah is the Islamic marriage ceremony, a sacred contract between a bride and groom. It is performed in the presence of witnesses and an Islamic officiant (Qazi or Imam). The ceremony can be held at a mosque, community center, or at home.',
       'The ceremony begins with the recitation of the Khutbah (sermon) by the officiant, which includes verses from the Quran about marriage. The bride and groom, along with their guardians (Wali), are present. The groom must have two male Muslim witnesses.',
