@@ -50,7 +50,6 @@ export const activityDetails: Record<string, ActivityDetail> = {
   i1: {
     activityId: 'i1',
     galleryImageIds: ['islam-nikah', 'islam-nikah-2', 'islam-nikah-3'],
-    // youtubeVideoId removed as requested
     howItsDone: [
       'Nikah is the Islamic marriage ceremony, a sacred contract between a bride and groom. It is performed in the presence of witnesses and an Islamic officiant (Qazi or Imam). The ceremony can be held at a mosque, community center, or at home.',
       'The ceremony begins with the recitation of the Khutbah (sermon) by the officiant, which includes verses from the Quran about marriage. The bride and groom, along with their guardians (Wali), are present. The groom must have two male Muslim witnesses.',
@@ -61,7 +60,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   i2: {
     activityId: 'i2',
-    galleryImageIds: ['islam-aqiqah', 'islam-nikah', 'muslim-hero'],
+    galleryImageIds: ['islam-aqiqah', 'aqiqah-example-2', 'aqiqah-example-3'],
     youtubeVideoId: 'vJ8wY5w5B5M', // Aqiqah ceremony tutorial video
     howItsDone: [
       'Aqiqah is an Islamic tradition performed to celebrate the birth of a child. It involves the sacrifice of an animal (sheep or goat) and the shaving of the baby\'s head. This ceremony is typically performed on the seventh day after birth, though it can be done later.',
