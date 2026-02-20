@@ -116,6 +116,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'temple.yatradham.org',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
