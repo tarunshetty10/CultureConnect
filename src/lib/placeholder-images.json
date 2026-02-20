@@ -103,16 +103,22 @@
       "imageHint": "islamic nikah"
     },
     {
+      "id": "islam-nikah-2",
+      "description": "Islamic wedding ceremony details - Bride and Groom.",
+      "imageUrl": "https://i.pinimg.com/1200x/d6/ac/d0/d6acd0cb877d13189fb78e75d5d75469.jpg",
+      "imageHint": "nikah ceremony"
+    },
+    {
+      "id": "islam-nikah-3",
+      "description": "Nikah wedding ceremony - Officiant and couple.",
+      "imageUrl": "https://www.brides.com/thmb/TVtGgkAqB6qCGJJxJq3SpLqV9x4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/nikah-wedding-ceremony-bride-groom-officiant-les-loups-primary-0425-ddd0445fd7d944df925280ae2f21d036.jpg",
+      "imageHint": "nikah wedding"
+    },
+    {
       "id": "islam-aqiqah",
       "description": "Newborn celebration in Islamic tradition.",
       "imageUrl": "https://live.staticflickr.com/3518/3846155186_f7bfa96931_z.jpg",
       "imageHint": "muslim baby"
-    },
-    {
-      "id": "islam-janazah",
-      "description": "Respectful prayer for the deceased.",
-      "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXNsaW0lMjBwcmF5ZXJ8ZW58MHx8fHwxNzY4MjMwMDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "muslim prayer"
     },
     {
       "id": "christian-baptism",

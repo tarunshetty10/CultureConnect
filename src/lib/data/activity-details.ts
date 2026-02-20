@@ -1,3 +1,4 @@
+
 /**
  * Extended details for activities (photos gallery, YouTube video, how it's done).
  * Keyed by activity id from religions data.
@@ -48,7 +49,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   i1: {
     activityId: 'i1',
-    galleryImageIds: ['islam-nikah', 'muslim-hero', 'islam-aqiqah'],
+    galleryImageIds: ['islam-nikah', 'islam-nikah-2', 'islam-nikah-3'],
     youtubeVideoId: 'kQqjKZ5n5B8', // Nikah ceremony tutorial video
     howItsDone: [
       'Nikah is the Islamic marriage ceremony, a sacred contract between a bride and groom. It is performed in the presence of witnesses and an Islamic officiant (Qazi or Imam). The ceremony can be held at a mosque, community center, or at home.',
