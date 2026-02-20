@@ -37,6 +37,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.99pandit.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
