@@ -43,6 +43,24 @@
       "imageHint": "hindu offerings"
     },
     {
+      "id": "ganesh-example-1",
+      "description": "Detailed ritual setup for Ganesh Pooja.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1573894156182-8df0f4bc5764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW5lc2glMjByaXR1YWxzfGVufDB8fHx8MTc3MTU4NjAwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ganesh rituals"
+    },
+    {
+      "id": "ganesh-example-2",
+      "description": "Traditional offerings and flowers for Ganesha.",
+      "imageUrl": "https://images.unsplash.com/photo-1761471679136-059d248cf4b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwdWphJTIwb2ZmZXJpbmdzfGVufDB8fHx8MTc3MTU4NjAwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "puja offerings"
+    },
+    {
+      "id": "ganesh-example-3",
+      "description": "Community gathering during Ganesh festival.",
+      "imageUrl": "https://images.unsplash.com/photo-1759674888570-823a590ee970?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGluZHUlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NzE1ODYwMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hindu festival"
+    },
+    {
       "id": "islam-nikah",
       "description": "Elegant Islamic wedding ceremony details.",
       "imageUrl": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpc2xhbWljJTIwd2VkZGluZ3xlbnwwfHx8fDE3NjgyMzAwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",

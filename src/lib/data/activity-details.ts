@@ -12,7 +12,7 @@ export interface ActivityDetail {
 export const activityDetails: Record<string, ActivityDetail> = {
   p1: {
     activityId: 'p1',
-    galleryImageIds: ['ganesh-pooja', 'satyanarayan-pooja', 'hindu-hero'],
+    galleryImageIds: ['ganesh-example-1', 'ganesh-example-2', 'ganesh-example-3'],
     youtubeVideoId: 'XRxUDL5QXPo', // "How to perform Ganesh Chaturthi Puja at home?"
     howItsDone: [
       'Ganesh Pooja is performed to invoke Lord Ganesha, the remover of obstacles and god of wisdom. It is commonly done before starting new ventures, during Ganesh Chaturthi, or on special occasions.',
