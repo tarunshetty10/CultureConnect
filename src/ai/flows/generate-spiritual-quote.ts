@@ -36,19 +36,19 @@ const prompt = ai.definePrompt({
     safetySettings: [
       {
         category: 'HARM_CATEGORY_HATE_SPEECH',
-        threshold: 'BLOCK_LOW_AND_ABOVE',
+        threshold: 'BLOCK_MEDIUM_AND_ABOVE',
       },
       {
         category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
-        threshold: 'BLOCK_LOW_AND_ABOVE',
+        threshold: 'BLOCK_MEDIUM_AND_ABOVE',
       },
       {
         category: 'HARM_CATEGORY_HARASSMENT',
-        threshold: 'BLOCK_LOW_AND_ABOVE',
+        threshold: 'BLOCK_MEDIUM_AND_ABOVE',
       },
       {
         category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-        threshold: 'BLOCK_LOW_AND_ABOVE',
+        threshold: 'BLOCK_MEDIUM_AND_ABOVE',
       },
     ],
   },
@@ -66,6 +66,9 @@ const generateSpiritualQuoteFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
-    return output!;
+    if (!output) {
+      throw new Error('No quote could be generated for this keyword. It might have been blocked by safety filters.');
+    }
+    return output;
   }
 );
