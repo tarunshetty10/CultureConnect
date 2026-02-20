@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Search, Send } from 'lucide-react';
+import { WHATSAPP_NUMBER } from '@/lib/constants';
+import Link from 'next/link';
 
 export default function PoojasPage({ params }: { params: Promise<{ religion: string }> }) {
   const resolvedParams = use(params);
@@ -16,17 +18,19 @@ export default function PoojasPage({ params }: { params: Promise<{ religion: str
 
   const [searchQuery, setSearchQuery] = useState('');
 
-  if (!religion || (resolvedParams.religion === 'hinduism' && !religion.poojas)) {
+  // Fallback to activities if 'poojas' property doesn't exist (Hinduism uses 'activities')
+  const activities = religion?.activities || [];
+
+  if (!religion) {
     notFound();
   }
 
   const filteredPoojas = useMemo(() => {
-    if (!religion?.poojas) return [];
-    return religion.poojas.filter(pooja => 
+    return activities.filter(pooja => 
       pooja.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       pooja.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
-  }, [religion, searchQuery]);
+  }, [activities, searchQuery]);
 
   return (
     <div className="container mx-auto px-4 py-12 min-h-screen">
@@ -79,12 +83,15 @@ export default function PoojasPage({ params }: { params: Promise<{ religion: str
                     <Button
                       variant="default"
                       className="flex-1 font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+                      asChild
                     >
-                      Explore Now
+                      <Link href={`/${resolvedParams.religion}/activities/${pooja.id}`}>
+                        Explore Now
+                      </Link>
                     </Button>
                     <Button variant="outline" className="flex-1 font-headline border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
                       <a
-                        href={`https://wa.me/918450925262?text=${encodeURIComponent(
+                        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                           `I'm interested in booking ${pooja.name} via CultureConnect`,
                         )}`}
                         target="_blank"

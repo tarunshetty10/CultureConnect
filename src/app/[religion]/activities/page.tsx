@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 import { Search, Send } from 'lucide-react';
+import { WHATSAPP_NUMBER } from '@/lib/constants';
 
 export default function ActivitiesPage({ params }: { params: Promise<{ religion: string }> }) {
   const resolvedParams = use(params);
@@ -90,7 +91,7 @@ export default function ActivitiesPage({ params }: { params: Promise<{ religion:
                     </Button>
                     <Button variant="outline" className="flex-1 font-headline border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
                       <a
-                        href={`https://wa.me/918450925262?text=${encodeURIComponent(
+                        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                           `I'm interested in booking ${activity.name} via CultureConnect`,
                         )}`}
                         target="_blank"

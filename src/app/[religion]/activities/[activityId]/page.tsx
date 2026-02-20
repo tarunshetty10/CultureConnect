@@ -10,8 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Send, ArrowLeft } from 'lucide-react';
 import { notFound } from 'next/navigation';
-
-const WHATSAPP_NUMBER = '918450925262';
+import { WHATSAPP_NUMBER } from '@/lib/constants';
 
 export default function ActivityDetailPage({
   params,
