@@ -33,6 +33,7 @@ const prompt = ai.definePrompt({
   input: {schema: GenerateSpiritualQuoteInputSchema},
   output: {schema: GenerateSpiritualQuoteOutputSchema},
   config: {
+    temperature: 1.2, // Increased for maximum variety and uniqueness
     safetySettings: [
       {
         category: 'HARM_CATEGORY_HATE_SPEECH',
@@ -56,8 +57,11 @@ const prompt = ai.definePrompt({
       },
     ],
   },
-  prompt: `You are a wise spiritual sage. Generate a short, powerful, and motivational spiritual quote that EXPLICITLY INCLUDES the keyword provided below. 
+  prompt: `You are a wise spiritual sage. Generate a short, powerful, and COMPLETELY UNIQUE motivational spiritual quote that EXPLICITLY INCLUDES the keyword provided below. 
   The quote should be inspiring, promote personal growth, and the word should fit naturally within the wisdom shared.
+  
+  CRITICAL: Do not repeat common proverbs or clichés. Create something fresh, poetic, and insightful that hasn't been heard a thousand times before. 
+  Each time you are asked, provide a different perspective or metaphor.
 
   Keyword: {{{keyword}}}`,
 });
@@ -74,8 +78,8 @@ const generateSpiritualQuoteFlow = ai.defineFlow(
       if (!output) {
         // Fallback for unexpected empty output from the LLM
         return {
-          quote: `Even in silence, ${input.keyword} can be found. Let your journey continue with hope.`,
-          attribution: "Traditional Wisdom"
+          quote: `In the quiet space of reflection, the essence of ${input.keyword} illuminates the soul's journey.`,
+          attribution: "Ancient Wisdom"
         };
       }
       return output;
@@ -83,7 +87,7 @@ const generateSpiritualQuoteFlow = ai.defineFlow(
       console.error('AI Quote Generation Error:', error);
       // High-level fallback to ensure the UI never shows "Generation Failed" for common errors
       return {
-        quote: `True ${input.keyword} begins where fear ends. Every step forward is a victory of the soul.`,
+        quote: `True ${input.keyword} begins when the mind finds stillness and the heart finds courage.`,
         attribution: "Spiritual Proverb"
       };
     }

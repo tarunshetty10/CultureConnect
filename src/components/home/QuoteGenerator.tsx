@@ -28,6 +28,8 @@ export default function QuoteGenerator() {
     }
 
     setIsLoading(true);
+    setQuoteData(null); // Clear previous quote for a fresh feeling
+    
     try {
       const result = await generateSpiritualQuote({ keyword: trimmed });
       setQuoteData(result);
@@ -61,6 +63,7 @@ export default function QuoteGenerator() {
               placeholder="e.g., Peace, Love, Strength..."
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}
               className="h-12 text-lg bg-background"
               maxLength={20}
             />
