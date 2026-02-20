@@ -34,7 +34,9 @@ export default function Footer() {
                 </li>
                 <li>
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/cultureconnect2026?igsh=bXl4NGducmx0dDd0" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-primary transition-colors"
                   >
                     <Instagram className="h-5 w-5" /> Instagram
