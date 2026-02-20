@@ -37,7 +37,7 @@ export const activityDetails: Record<string, ActivityDetail> = {
   },
   p3: {
     activityId: 'p3',
-    galleryImageIds: ['satyanarayan-pooja', 'lakshmi-pooja', 'hindu-hero'],
+    galleryImageIds: ['satyanarayan-example-1', 'satyanarayan-example-2', 'satyanarayan-example-3'],
     youtubeVideoId: 'GI3d9LQUFCA', // Satyanarayan Pooja tutorial video
     howItsDone: [
       'Satyanarayan Pooja is a sacred ritual dedicated to Lord Vishnu in his form as Satyanarayan, the embodiment of truth. It is typically performed on full moon days (Purnima) and is believed to bring peace, prosperity, and fulfillment of wishes.',
