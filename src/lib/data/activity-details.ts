@@ -1,4 +1,3 @@
-
 /**
  * Extended details for activities (photos gallery, YouTube video, how it's done).
  * Keyed by activity id from religions data.
@@ -91,18 +90,6 @@ export const activityDetails: Record<string, ActivityDetail> = {
       'The officiant welcomes everyone and offers an opening prayer. Scripture readings are shared, often including passages about love and marriage such as 1 Corinthians 13, Ephesians 5:22-33, or the Song of Solomon. A sermon or homily is delivered, focusing on the meaning of Christian marriage as a covenant.',
       'The couple exchanges vows, promising to love, honor, and cherish each other for life. Rings are exchanged as symbols of their commitment. The officiant blesses the rings and the couple. In some traditions, the couple lights a unity candle, symbolizing their two lives becoming one.',
       'The ceremony concludes with a final blessing and prayer. The officiant pronounces the couple as husband and wife, and they share their first kiss as a married couple. The recessional follows, with the newlyweds leading the way out of the church. A reception typically follows to celebrate the union.',
-    ],
-  },
-  c3: {
-    activityId: 'c3',
-    galleryImageIds: ['christian-memorial', 'christian-hero', 'christian-wedding'],
-    youtubeVideoId: 'ZxJKnDLYZz6', // Memorial service tutorial video
-    howItsDone: [
-      'A Christian memorial service is a ceremony to honor and remember a deceased loved one, celebrating their life and offering comfort to the grieving family. It can be held in a church, funeral home, or other venue. The service focuses on hope, resurrection, and the promise of eternal life.',
-      'The service begins with a processional, where the casket (if present) is brought into the venue, followed by the family. Hymns and scripture readings are shared, often including passages about resurrection and eternal life such as John 11:25-26, 1 Thessalonians 4:13-18, and Revelation 21:1-4.',
-      'A eulogy or tribute is given, sharing memories and celebrating the life of the deceased. Family members or close friends may share personal stories and reflections. The officiant delivers a sermon or message, offering comfort and hope based on Christian faith and the promise of resurrection.',
-      'Prayers are offered for the deceased, asking God for mercy and eternal rest. Prayers are also said for the grieving family, asking for strength, comfort, and peace. The congregation may participate in responsive readings or prayers. Music, including hymns and spiritual songs, is an important part of the service.',
-      'The service concludes with a benediction and final prayer. If a burial follows, there is a committal service at the gravesite, where the body is committed to the earth with prayers. Family and friends gather afterward for a reception or meal, providing support and sharing memories of the loved one.',
     ],
   },
   s1: {

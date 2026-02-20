@@ -103,12 +103,6 @@ export const religions: Religion[] = [
         name: 'Wedding Ceremony',
         description: 'Celebrate the union of two souls in a traditional church wedding ceremony.',
         imageId: 'christian-wedding'
-      },
-      {
-        id: 'c3',
-        name: 'Memorial Service',
-        description: 'Honor and remember loved ones with a respectful and spiritual memorial service.',
-        imageId: 'christian-memorial'
       }
     ]
   },
