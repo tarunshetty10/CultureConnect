@@ -175,6 +175,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.punjabnewsexpress.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
