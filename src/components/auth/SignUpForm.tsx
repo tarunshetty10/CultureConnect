@@ -10,13 +10,16 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase/client';
 import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
-import { Loader2 } from 'lucide-react';
+import { Loader2, User } from 'lucide-react';
 import Link from 'next/link';
 
 const formSchema = z.object({
+  displayName: z.string().min(2, {
+    message: 'User Name must be at least 2 characters.',
+  }),
   email: z.string().email({
     message: 'Please enter a valid email address.',
   }),
@@ -39,6 +42,7 @@ export default function SignUpForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      displayName: '',
       email: '',
       phoneNumber: '',
       password: '',
@@ -56,8 +60,14 @@ export default function SignUpForm() {
         values.password,
       );
 
+      // Update auth profile
+      await updateProfile(userCredential.user, {
+        displayName: values.displayName,
+      });
+
       // Save additional user details to Firestore for the profile page
       await setDoc(doc(db, 'users', userCredential.user.uid), {
+        displayName: values.displayName,
         email: values.email,
         phoneNumber: values.phoneNumber,
         createdAt: serverTimestamp(),
@@ -84,6 +94,21 @@ export default function SignUpForm() {
     <div className="w-full max-w-md">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="displayName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">
+                  <User className="h-4 w-4" /> User Name
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="John Doe" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <FormField
             control={form.control}
             name="email"

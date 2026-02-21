@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { getAuth, signOut } from 'firebase/auth';
 
 type UserProfileData = {
+  displayName?: string;
   email: string;
   phoneNumber?: string;
 };
@@ -45,31 +46,37 @@ export default function ProfilePage() {
 
   return (
     <div className="container mx-auto px-4 py-12 min-h-[calc(100vh-4rem)] flex items-center justify-center">
-      <Card className="w-full max-w-lg">
+      <Card className="w-full max-w-lg border-2 border-primary/20 shadow-xl">
         <CardHeader>
-          <CardTitle className="font-headline text-2xl">
+          <CardTitle className="font-headline text-2xl text-primary text-center">
             Your Profile
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6">
           <div>
-            <p className="text-sm text-muted-foreground">Email</p>
+            <p className="text-sm text-muted-foreground font-headline uppercase tracking-wider">User Name</p>
+            <p className="text-lg font-medium">
+              {isLoading ? 'Loading...' : profile?.displayName ?? user.displayName ?? 'Not provided'}
+            </p>
+          </div>
+          <div>
+            <p className="text-sm text-muted-foreground font-headline uppercase tracking-wider">Email</p>
             <p className="text-lg">
               {user.email ?? profile?.email ?? 'Not available'}
             </p>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground">Phone Number</p>
+            <p className="text-sm text-muted-foreground font-headline uppercase tracking-wider">Phone Number</p>
             <p className="text-lg">
               {isLoading
                 ? 'Loading...'
                 : profile?.phoneNumber ?? 'Not provided'}
             </p>
           </div>
-          <div className="pt-4">
+          <div className="pt-6 border-t border-border">
             <Button
               variant="outline"
-              className="w-full font-headline border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground"
+              className="w-full font-headline border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground transition-all duration-300"
               onClick={handleSignOut}
             >
               Log Out
@@ -80,4 +87,3 @@ export default function ProfilePage() {
     </div>
   );
 }
-
