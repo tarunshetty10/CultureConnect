@@ -147,6 +147,24 @@ export default function ReligionPage({ params }: ReligionPageProps) {
             </Button>
           </section>
         )}
+
+        {religion.slug === 'sikhism' && (
+          <section className="mt-16 text-center">
+            <Button
+              asChild
+              size="lg"
+              className="font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+            >
+              <a
+                href="https://gurmatveechar.com/books/English_Books/Sri_Guru_Granth_Sahib_Translation/Dr_Gopal_Singh/Sri.Guru.Granth.Sahib.English.Version.by.Dr.Gopal.Singh.01.(GurmatVeechar.com).pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sri Guru Granth Sahib
+              </a>
+            </Button>
+          </section>
+        )}
       </div>
     </article>
   );
