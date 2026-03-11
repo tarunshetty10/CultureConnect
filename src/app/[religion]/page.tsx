@@ -111,6 +111,24 @@ export default function ReligionPage({ params }: ReligionPageProps) {
             </Button>
           </section>
         )}
+
+        {religion.slug === 'islam' && (
+          <section className="mt-16 text-center">
+            <Button
+              asChild
+              size="lg"
+              className="font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+            >
+              <a
+                href="https://files.alislam.cloud/pdf/Holy-Quran-English.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Quran
+              </a>
+            </Button>
+          </section>
+        )}
       </div>
     </article>
   );
