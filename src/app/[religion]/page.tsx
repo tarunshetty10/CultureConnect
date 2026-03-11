@@ -5,6 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
 
 type ReligionPageProps = {
   params: {
@@ -92,6 +93,24 @@ export default function ReligionPage({ params }: ReligionPageProps) {
             )}
           </Accordion>
         </section>
+
+        {religion.slug === 'hinduism' && (
+          <section className="mt-16 text-center">
+            <Button
+              asChild
+              size="lg"
+              className="font-headline transition-all duration-300 hover:bg-background text-foreground hover:text-foreground border-2 border-transparent hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+            >
+              <a
+                href="https://www.prabhupada-books.de/pdf/Bhagavad-gita-As-It-Is.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bhagavad-gita
+              </a>
+            </Button>
+          </section>
+        )}
       </div>
     </article>
   );
