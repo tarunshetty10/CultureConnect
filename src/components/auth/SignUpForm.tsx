@@ -103,7 +103,7 @@ export default function SignUpForm() {
                   <User className="h-4 w-4" /> User Name
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input placeholder="Lionel Messi" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
