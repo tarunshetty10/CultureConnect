@@ -5,6 +5,7 @@ import { AuthProvider } from '@/context/AuthContext';
 import Header from '@/components/layout/Header';
 import NavigationMenu from '@/components/layout/NavigationMenu';
 import Footer from '@/components/layout/Footer';
+import DisclaimerModal from '@/components/layout/DisclaimerModal';
 
 export const metadata: Metadata = {
   title: 'CultureConnect',
@@ -31,6 +32,7 @@ export default function RootLayout({
             <NavigationMenu />
             <Footer />
           </div>
+          <DisclaimerModal />
           <Toaster />
         </AuthProvider>
       </body>
